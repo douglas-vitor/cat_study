@@ -28,7 +28,7 @@ const PomodoroScreen = () => {
     const handleTimerEnd = async () => {
         setIsRunning(false);
         Vibration.vibrate();
-        const {sound} = await Audio.Sound.createAsync(require('../assets/alarm.mp3'));
+        const {sound} = await Audio.Sound.createAsync(require('../assets/alarm2.mp3'));
         setSound(sound);
         await sound.playAsync();
         alert(`${selectedOption}`);
