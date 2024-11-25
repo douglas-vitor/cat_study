@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "catstudy",
+    "slug": "catstudy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/cat-icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/cat-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/cat-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.douglascat.extensaoT2"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true,
+          "useSQLCipher": true,
+          "android": {
+            "enableFTS": false,
+            "useSQLCipher": false
+          },
+          "ios": {
+            "customBuildFlags": [
+              "-DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_SNAPSHOT=1"
+            ]
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "61c1ef9d-193e-4d19-a28c-a5e3757d1067"
+      }
+    }
+  }
+}
